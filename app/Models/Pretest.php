@@ -25,7 +25,9 @@ class Pretest extends Model
 
     public function scopeWeeklyLeaderboard($query, $limit = 10)
 {
-    $currentWeek = now()->format('Y-W');
+    // $currentWeek = now()->format('Y-W');
+
+    $currentWeek = '2026-18';
     
     return $query->where('week', $currentWeek)
                 ->orderByDesc('total_score')
